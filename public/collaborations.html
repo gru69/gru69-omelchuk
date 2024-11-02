@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborations - Omelchuk Atelier</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/shop">SHOP</a></li>
+                <li><a href="/collaborations">COLLABORATIONS</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="centered-content">
+        <section id="collaborations" class="section-padding">
+            <h2 class="section-title">COLLABORATIONS</h2>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <select id="size-filter" aria-label="Filter by size">
+                        <option value="">All Sizes</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="color-filter" aria-label="Filter by color">
+                        <option value="">All Colors</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="price-sort" aria-label="Sort by price">
+                        <option value="">Sort by Price</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div id="product-grid" class="product-grid">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="/collaborations.js"></script>
+</body>
+</html> 

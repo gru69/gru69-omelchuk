@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Omelchuk Atelier</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .product-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            padding: 35px;
+            max-width: 1600px;
+            margin: 0 auto;
+            min-height: calc(100vh - 70px);
+        }
+
+        .product-media {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-images-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-media-item {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .product-media-item:hover {
+            opacity: 0.95;
+        }
+
+        .product-details {
+            position: relative;
+            padding: 20px;
+            background: #111;
+        }
+
+        .product-info-sticky {
+            position: sticky;
+            top: 35px;
+            max-height: calc(100vh - 70px);
+            overflow-y: auto;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #product-name {
+            font-size: 1.2em;
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .product-description {
+            width: 100%;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            margin: 0;
+            padding: 0;
+            font-size: 0.9em;
+            color: white;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .product-specs {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+        }
+
+        .spec-row {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .spec-row p {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            font-size: 0.8em;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: white;
+        }
+
+        .spec-row strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        .spec-row span {
+            color: white;
+            text-align: right;
+            min-width: 120px;
+            font-weight: 400;
+        }
+
+        .note {
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85em;
+            margin: 20px 0;
+            line-height: 1.6;
+            font-weight: 300;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        .buy-now-btn {
+            margin-top: 30px;
+            width: 100%;
+            padding: 15px;
+            background: #111;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.85em;
+            letter-spacing: 0.03em;
+            font-weight: 500;
+        }
+
+        .buy-now-btn:hover {
+            background: #333;
+            transform: translateY(-1px);
+        }
+
+        .product-info-sticky::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .product-info-sticky::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .product-info-sticky::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        .product-info-sticky::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        @media (max-width: 1024px) {
+            .product-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 20px;
+            }
+
+            .product-info-sticky {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/shop">SHOP</a></li>
+                <li><a href="/collaborations">COLLABORATIONS</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-container">
+            <div class="product-media">
+                <div id="product-images" class="product-images-list">
+                    <!-- Images will be loaded here -->
+                </div>
+            </div>
+            <div class="product-details">
+                <div class="product-info-sticky">
+                    <h1 id="product-name"></h1>
+                    <p id="product-description" class="product-description">
+                        <!-- Description will be loaded here -->
+                    </p>
+                    <div class="product-specs">
+                        <div class="spec-row">
+                            <p><strong>PRICE</strong><span id="product-price"></span></p>
+                            <p><strong>PREPAYMENT</strong><span id="product-prepayment"></span></p>
+                        </div>
+                        <div class="spec-row">
+                            <p><strong>SIZE</strong><span id="product-size"></span></p>
+                            <p><strong>COLOR</strong><span id="product-color"></span></p>
+                        </div>
+                        <div class="spec-row">
+                            <p><strong>DELIVERY</strong><span id="product-delivery"></span></p>
+                        </div>
+                    </div>
+                    <button class="buy-now-btn" onclick="window.open('https://www.instagram.com/omelchuk_atelier/', '_blank')">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/product.js"></script>
+</body>
+</html> 

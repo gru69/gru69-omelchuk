@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Upload directory
+public/uploads/
+
+# IDE specific files
+.idea/
+.vscode/ 

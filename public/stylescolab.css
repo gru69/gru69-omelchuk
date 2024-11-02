@@ -1,0 +1,69 @@
+/* General styles */
+body {
+  font-family: sans-serif;
+  background-color: #181414; /* Dark background */
+  color: #fff; /* White text */
+}
+  .pd-name {
+    font-size: 100px; /* Adjust the size as needed */
+  }
+
+  #buy-now-btn {
+    /* ...other styles... */
+    position: static; /* Default positioning */
+  }
+  .product-container {
+    display: flex; /* Allow side-by-side layout */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+    gap: 40px; /* Space between product media and details */
+  }
+  
+  .product-media {
+    flex: 1; /* Take up available space */
+    /* Other styles for product images can be added here */
+  }
+  
+  .product-details {
+    flex: 1; /* Take up available space */
+    background-color: transparent; /* Transparent background */
+  }
+
+  /* ...existing styles... */
+
+.product-description {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .product-specs {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .product-specs h2 {
+    margin-bottom: 10px;
+  }
+  
+  .product-specs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-specs li {
+    margin-bottom: 10px;
+  }
+  
+  .product-specs strong {
+    color: #fff;
+  }
+  
+  .product-specs span {
+    color: #ccc;
+  }

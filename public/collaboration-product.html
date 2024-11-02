@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaboration - Omelchuk Atelier</title>
+  <link rel="stylesheet" href="/stylescolab.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+      <nav>
+          <ul>
+              <li><a href="/">HOME</a></li>
+              <li><a href="/shop">SHOP</a></li>
+              <li><a href="/collaborations">COLLABORATIONS</a></li>
+              <li><a href="/contact">CONTACT</a></li>
+          </ul>
+      </nav>
+    </header>
+
+  <main>
+    <div class="product-container collaboration-product">
+      <div class="product-media">
+        <div id="product-images" class="product-images-list">
+          </div>
+      </div>
+      <div class="product-details">
+        <div class="product-info">
+          <h1 class= "pd-name" id="product-name"></h1>
+          <p class="collaborator">In collaboration with: <span id="product-collaborator"></span></p>
+          <div class="product-description">
+            <p id="product-description"></p>
+          </div>
+          <div class="product-specs">
+            <h2>Specifications</h2>
+            <ul>
+              <li>
+                <strong>PRICE</strong>
+                <span id="product-price"></span>
+              </li>
+              <li>
+                <strong>PREPAYMENT</strong>
+                <span id="product-prepayment"></span>
+              </li>
+              <li>
+                <strong>SIZE</strong>
+                <span id="product-size"></span>
+              </li>
+              <li>
+                <strong>COLOR</strong>
+                <span id="product-color"></span>
+              </li>
+              <li>
+                <strong>DELIVERY</strong>
+                <span id="product-delivery"></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="product-actions">
+          <button class="buy-now-btn" id="buybtn" onclick="window.open('https://www.instagram.com/omelchuk_atelier/', '_blank')">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/collaboration-product.js"></script>
+</body>
+</html>
