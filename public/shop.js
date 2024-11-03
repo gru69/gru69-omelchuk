@@ -73,11 +73,6 @@ function displayProducts(products) {
     const productGrid = document.getElementById('product-grid');
     productGrid.innerHTML = '';
   
-    if (products.length === 0) {
-      productGrid.innerHTML = '<p class="no-products">No products match your filters.</p>';
-      return;
-    }
-  
     products.forEach(product => {
       const productDiv = document.createElement('div');
       productDiv.className = 'product-item';
@@ -85,7 +80,7 @@ function displayProducts(products) {
       const imagesContainer = document.createElement('div');
       imagesContainer.className = 'product-images';
   
-      // Only display the first image (if images exist)
+      // Only display the first image if images exist
       if (product.images && product.images.length > 0) {
         const firstImage = product.images[0];
         const img = document.createElement('img');
@@ -99,8 +94,7 @@ function displayProducts(products) {
       productInfo.className = 'product-info';
       productInfo.innerHTML = `
         <h3 class="product-name">${product.name || 'Unnamed Product'}</h3>
-        <p class="collaboration-with">In collaboration with: ${product.collaborator}</p>
-        <a href="/collaboration/${product.id}" class="view-product-btn">View Product</a>
+        <a href="/product/${product.id}" class="view-product-btn">View Product</a>
       `;
   
       productDiv.appendChild(imagesContainer);
