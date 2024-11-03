@@ -1729,6 +1729,7 @@ video.product-detail-media {
         width: 80%;
         height: auto;
         margin: 0;
+        margin-left: 40px;
     }
 }
 
