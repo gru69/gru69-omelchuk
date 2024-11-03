@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadProduct(productId);
 });
 
+function collabInsta() {
+    let instahandle = document.getElementById("product-collaborator").innerText.slice(1);
+    console.log(instahandle);
+    window.open("https://www.instagram.com/" + instahandle + "/", '_blank');
+}
 async function loadProduct(productId) {
     try {
         const response = await fetch('/collaborations.json');

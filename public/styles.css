@@ -1044,7 +1044,7 @@ footer {
 }
 
 .product-image {
-    width: 100%;
+    width: 201%;
     height: 100%;
     object-fit: cover;
 }
@@ -1726,7 +1726,7 @@ video.product-detail-media {
     }
 
     .product-image {
-        width: 100%;
+        width: 80%;
         height: auto;
         margin: 0;
     }
@@ -2819,7 +2819,7 @@ video.product-detail-media {
     .collaboration-product .buy-now-btn {
         position: fixed;
         bottom: 2vh;
-        left: 4vw;
+        left: 50vw;
         width: 92vw;
         z-index: 1000;
     }

@@ -8,6 +8,13 @@ body {
     font-size: 100px; /* Adjust the size as needed */
   }
 
+  .colab-btn {
+    background-color: #000;
+    color: #000;
+    border: none;
+    font-size: larger;
+  }
+
   #buy-now-btn {
     /* ...other styles... */
     position: static; /* Default positioning */
